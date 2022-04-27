@@ -1,0 +1,43 @@
+@use "../base/typography" as *;
+@use "../sass-utils/mixins" as *;
+@use "../base/wrapper" as *;
+@use "../sass-utils/variables" as *;
+
+.two-side{
+  &__photo{
+    background-color: $white;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 350px;
+  }
+  &__container{
+    background-color: $light-grey;
+    display: flex;
+    flex-direction: column;
+  }
+  &__text{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 75px 0;
+  }
+
+}
+
+.about{
+  .two-side{
+    &__photo{
+      background-image: url("../../sources/logo/smallLogo.png");
+      background-size: 200px;
+    }
+  }
+}
+
+.realisations{
+  .two-side{
+    &__photo{
+      background-image: url("../../sources/design/realisations.jpg");
+      background-size: cover;
+    }
+  }
+}

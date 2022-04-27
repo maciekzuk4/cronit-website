@@ -1,0 +1,27 @@
+@use "../base/typography" as *;
+@use "../sass-utils/mixins" as *;
+@use "../base/wrapper" as *;
+
+.hero{
+  padding: 70px 0;
+  &__container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+  }
+  &__text{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__line{
+    width: 90%;
+  }
+  &__image{
+    width: 100%;
+    img{
+      width: 100%;
+    }
+  }
+}
+

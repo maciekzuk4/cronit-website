@@ -1,0 +1,63 @@
+@use "../sass-utils/variables" as *;
+@use "../base/brakepoints" as br;
+.navbar {
+  height: 75px;
+  display: flex;
+  &__container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__element {
+    height: 30px;
+    display: inline-block;
+    img {
+      height: 100%;
+    }
+  }
+
+  &__hamburger{
+    @media(min-width: br.$md){
+      display: none;
+    }
+  }
+
+  &__options {
+    display: none;
+    list-style: none;
+    gap: 20px;
+    @media(min-width: br.$md){
+      display: flex;
+    }
+
+    li{
+      position: relative;
+      transition: .3s;
+
+      &::before{
+        content: "";
+        display: inline-block;
+        width: 0;
+        height: 3px;
+        background-color: $green;
+        position: absolute;
+        bottom: -7px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        transition: .3s;
+      }
+      &:hover{
+        color: $hover-black;
+        cursor: pointer;
+      }
+      &:hover::before{
+        width: 90%;
+      }
+    }
+  }
+}
+
