@@ -2,42 +2,161 @@
 @use "../sass-utils/mixins" as *;
 @use "../base/wrapper" as *;
 @use "../sass-utils/variables" as *;
+@use "../base/brakepoints" as *;
 
-.two-side{
-  &__photo{
+.two-side {
+  position: relative;
+  &__background {
+    background-color: $light-grey;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    @media (min-width: $md) {
+      height: 800px;
+    }
+    @media (min-width: $lg) {
+      height: 600px;
+      flex-direction: row;
+    }
+  }
+  .wrapper {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    @media (min-width: $md) {
+     align-items: flex-start;
+    }
+    @media (min-width: $lg) {
+      flex-direction: row;
+    }
+  }
+
+  &__imgPlaceholder {
+    height: 50%;
+    width: 100%;
+    @media (min-width: $md) {
+      height: 50%;
+      width: 100%;
+      //background-color: red;
+    }
+    @media (min-width: $lg) {
+      height: 100%;
+      width: 50%;
+    }
+  }
+
+  &__photo {
+    width: 100%;
+    height: 45%;
     background-color: $white;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 350px;
-  }
-  &__container{
-    background-color: $light-grey;
-    display: flex;
-    flex-direction: column;
-  }
-  &__text{
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    padding: 75px 0;
+    bottom: 0;
+    @media (min-width: $md) {
+      height: 50%;
+
+    }
+    @media (min-width: $lg) {
+      height: 100%;
+      width: 50%;
+    }
   }
 
-}
-
-.about{
-  .two-side{
-    &__photo{
-      background-image: url("../../sources/logo/smallLogo.png");
-      background-size: 200px;
+  &__text {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 35px 0;
+    @media (min-width: $md) {
+      height: 50%;
+      width: 100%;
+      padding: 55px 0;
+    }
+    @media (min-width: $lg) {
+      height: 100%;
+      width: 50%;
     }
   }
 }
 
-.realisations{
-  .two-side{
+.about {
+  .wrapper {
+    flex-direction: row-reverse;
+    @media (min-width: $md) {
+      flex-direction: column;
+    }
+    @media (min-width: $lg) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  .two-side {
+    &__background {
+      flex-direction: row-reverse;
+      @media (min-width: $lg) {
+        flex-direction: row;
+      }
+      @media (min-width: $lg) {
+        flex-direction: row-reverse;
+      }
+    }
+
+    &__text {
+      @media (min-width: $lg) {
+        padding-right: 35px;
+      }
+
+    }
+
+    &__photo{
+      background-size: 200px;
+      background-image: url("../../sources/logo/smallLogo.png");
+      @media (min-width: $md) {
+        background-size: 300px;
+      }
+    }
+  }
+}
+
+.realisations {
+  .wrapper {
+    flex-direction: row-reverse;
+    @media (min-width: $md) {
+      flex-direction: column;
+    }
+    @media (min-width: $lg) {
+      flex-direction: row;
+    }
+  }
+
+  .two-side {
+    &__background {
+      flex-direction: row-reverse;
+      @media (min-width: $lg) {
+        flex-direction: row;
+      }
+      @media (min-width: $lg) {
+        flex-direction: row;
+      }
+    }
+
+    &__text {
+      @media (min-width: $lg) {
+        padding-left: 35px;
+      }
+
+    }
+
     &__photo{
       background-image: url("../../sources/design/realisations.jpg");
-      background-size: cover;
     }
   }
 }

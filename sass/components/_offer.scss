@@ -1,10 +1,22 @@
 @use "../sass-utils/variables" as *;
-.offer{
+@use "../base/brakepoints" as *;
+
+.offer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap:30px;
-  &__icon{
+  gap: 30px;
+
+  @media(min-width: $md) {
+    flex-direction: row;
+    justify-content: center;
+
+  }
+  @media(min-width: $lg) {
+    width: 800px;
+  }
+
+  &__icon {
     background-color: $light-green;
     width: 150px;
     height: 150px;
@@ -13,11 +25,18 @@
     justify-content: center;
     align-items: center;
   }
-  &__text{
+
+  &__text {
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap:10px;
+    gap: 10px;
+    @media(min-width: $md) {
+      text-align: left;
+      width: 50%;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
   }
 }

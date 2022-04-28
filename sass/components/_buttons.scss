@@ -1,5 +1,5 @@
 @use "../sass-utils/variables" as *;
-
+@use "../base/brakepoints" as *;
 .button{
   font-family: 'Lato', sans-serif;
   background-color: $green;
@@ -14,6 +14,10 @@
   cursor: pointer;
   text-align: center;
   max-width: 225px;
+  @media(min-width: $lg){
+    font-size: 12px;
+    padding: 1.25em 1.15em;
+  }
   &:hover{
     background-color: $green-hover;
   }
