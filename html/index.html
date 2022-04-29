@@ -6,23 +6,38 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CronIT</title>
-    <link rel="stylesheet" href="../sass/style.css">
+    <link rel="stylesheet" href="../sass/pages/style.css">
 </head>
 <body>
-<div class="navbar">
+<div class="menu">
+    <div class="menu__container" id="menu">
+        <div class="menu__navbar">
+            <img src="../sources/logo/fullLogo.png" alt="">
+            <img src="../sources/icons/cross.png" alt="" class="menu__cross" id="cross">
+        </div>
+        <div class="menu__text">
+            <h2>O nas</h2>
+            <h2>Realizacje</h2>
+            <h2>Oferta</h2>
+            <h2>Kontakt</h2>
+        </div>
+    </div>
+    <div class="menu__background" id="background"></div>
+</div>
+<div id="navbar" class="navbar ">
     <div class="wrapper">
         <div class="navbar__container">
             <div class="navbar__element">
                 <img src="../sources/logo/fullLogo.png" alt="">
             </div>
-            <div class="navbar__element navbar__hamburger">
+            <div class="navbar__element navbar__hamburger" id="hamburger">
                 <img src="../sources/icons/hamburger.svg" alt="">
             </div>
             <ul class="navbar__options">
-                <li class="option">O nas</li>
-                <li class="option">Realizacje</li>
-                <li class="option">Oferta</li>
-                <li class="option">Kontakt</li>
+                <li class="option" id="about">O nas</li>
+                <li class="option" id="realisations">Realizacje</li>
+                <li class="option" id="offer">Oferta</li>
+                <li class="option" id="contact">Kontakt</li>
             </ul>
         </div>
 
@@ -44,7 +59,7 @@
         </div>
     </div>
 </div>
-<div class="about two-side">
+<div id="aboutSection" class="about two-side">
     <div class="wrapper">
         <div class="two-side__imgPlaceholder"></div>
         <div class="two-side__text">
@@ -62,7 +77,7 @@
         <div class="two-side__photo">
         </div>
     </div>
-</div>
+</div >
 <div class="stats">
     <div class="wrapper">
         <div class="stats__header">
@@ -85,7 +100,7 @@
         </div>
     </div>
 </div>
-<div class="realisations two-side">
+<div id="realisationsSection" class="realisations two-side">
     <div class="wrapper">
         <div class="two-side__imgPlaceholder"></div>
         <div class="two-side__text">
@@ -104,7 +119,7 @@
         </div>
     </div>
 </div>
-<div class="offers">
+<div id="offerSection" class="offers">
     <div class="wrapper">
         <div class="offers__header">
             <p class="category">Nasze oferty</p>
@@ -197,7 +212,7 @@
         </div>
     </div>
 </div>
-<div class="contact">
+<div id="contactSection" class="contact">
     <div class="wrapper">
         <div class="contact__header">
             <p class="category">Kontakt</p>
@@ -248,5 +263,7 @@
         All Rights Reserved</p>
 </div>
 <script src="../javascript/stats.js"></script>
+<script src="../javascript/menu.js"></script>
+<script src="../javascript/navbar.js"></script>
 </body>
 </html>

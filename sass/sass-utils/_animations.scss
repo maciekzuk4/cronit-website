@@ -1,0 +1,19 @@
+@keyframes navbarShow {
+  from {
+    top: -100%
+  }
+
+  to {
+    top: 0
+  }
+}
+
+@keyframes navbarHide {
+  0% {
+    top: 0
+  }
+
+  100% {
+    top: -100%
+  }
+}

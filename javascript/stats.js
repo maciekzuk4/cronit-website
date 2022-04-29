@@ -24,6 +24,5 @@ let increment = () => {
 }
 window.addEventListener('scroll',()=>{
     scroll = window.scrollY
-    console.log(scroll)
-    scroll > 1000 ? fn() : null
+    scroll > 1200 ? fn() : null
 })
